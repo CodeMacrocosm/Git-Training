@@ -1,4 +1,5 @@
-# git_basics
+# git_intro
+
 
 # Introduction to Version Control Using Git
 
