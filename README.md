@@ -1,93 +1,193 @@
-# git_intro
+#  Git Training: "Unlock Git Mastery: Elevate Your Collaboration Game! 🚀💻🌐 📘🚀
+
+🌟🌟🌟🌟
+
+[![GitHub stars](https://img.shields.io/github/stars/CodeMacrocosm/Git-Training?style=flat-square)](https://github.com/CodeMacrocosm/Git-Training/stargazers)
+
+[![GitHub forks](https://img.shields.io/github/forks/CodeMacrocosm/Git-Training?style=flat-square)](https://github.com/CodeMacrocosm/Git-Training/network)
+
+🌟🌟🌟🌟
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Introduction to Version Control Using Git](#introduction-to-version-control-using-git)
+3. [Setting up Git](#setting-up-git)
+4. [Git Cheat Sheet](#git-cheat-sheet)
+5. [Uploading Files to GitHub with Branching](#uploading-files-to-github-with-branching-)
+6. [Why This Git Training?](#-why-this-git-training)
+7. [License](#-license)
+8. [Star This Repository](#-star-this-repository)
+9. [Conclusion](#conclusion)
+
+---
+
+## Overview
+
+Welcome to Git Training, a Hands-On Training repository led by **Shreya Malogi**! 🌟 comprehensive guide to getting started with Git. This training edition covers not only the basic GitHub workflow but also provides an introduction to version control using Git, essential command-line interface commands, and a Git cheat sheet. 📘🚀
+
+## Introduction to Version Control Using Git
+
+### What is Version Control?
+
+Version control allows you to manage a 🔄 collection of files, such as 💻 source code for a project or 📁 files for a website, by 🕰️ keeping track of changes over time. It eliminates the ✨ need to archive entire directories to 🤝 maintain different versions manually. Git, a distributed version 🌐 control system, is widely used for efficient collaboration and code management.
 
 
-# Introduction to Version Control Using Git
+### Learning Objectives
 
-## What is version control ?
+1. Learn basic command-line interface commands:
+   - `mkdir`, `cd`, `ls`, `rm`, `mv` 💻
+2. Installing Git
+3. Learn basic Git commands:
+   - `log`, `status`, `diff`, `stash`, `commit`, `add`, `rm`, `.gitignore`, `branch`, `checkout` 🚀
+   - Cloning, pulling, push 🔄
+4. Learn basic GitHub actions:
+   - Pull requests, forking 🌐
 
-Say you have a bunch of files that go together, such as source code for a project, or files for a website. Now if you want to keep an old version you have to archive a whole directory. Keeping many versions around by hand is inconvenient, and quickly becomes expensive.Version control systems are no different. They all have nice interfaces to manage a directory of stuff. You can save the state of the directory every so often, and you can load any one of the saved states later on.Version control systems are no different. They all have nice interfaces to manage a directory of stuff. You can save the state of the directory every so often, and you can load any one of the saved states later on.
+### Setting up Git
 
-### Learning Objectives:
+Download & Install Git from [git-scm.com](http://git-scm.com/downloads). ⬇️
 
-* #### Learn basic command line interface commands
-    * mkdir, cd, ls, rm, mv
-    * installing git
-* #### Learn basic git commands
-    * log, status, diff, stash, commit, add, rm, .gitignore, branch, checkout
-    * cloning, pulling, push
-* #### Learn basic github actions:
-    * pull requests, forking
+#### Configuring Git Settings (Initial Setup) 🤖
 
-## Setting up git !
+After installing Git, introduce yourself to Git with your name and public email address:
 
-Download & Install Git From: http://git-scm.com/downloads
+```bash
+git config --global user.email "yourmail@example.com"
+git config --global user.name "Your User Name Comes Here" 
+```
 
-In your command prompt or terminal use the following commands for respective operations.
+#### Checking Configuration 🕵️
 
-### Configuring Git Settings (Initial Setup)
+To check your credentials:
 
-After installing git it is a good idea to introduce yourself to Git with your name and public email address before doing any operation. The easiest way to do so is:
+```bash
+git config user.name 
+git config user.email 
+```
 
-`git config --global user.email "yourmail@example.com"`
+*Make sure you run these commands in your working folder/project folder.* 📂
 
-`git config --global user.name "Your User Name Comes Here"`
+### Git Cheat Sheet 
 
-### Checking Configuration
+| Command | Description |
+| ------- | ----------- |
+| `git init` | Initialize a new Git repository 🔄
+| `git clone <url>` | Clone a repository into a new directory 📂
+| `git remote add origin <url>` | Add a remote repository 🌐
+| `git remote -v` | Display remote repositories 📊
+| `git status` | Show the working tree status 🌳
+| `git add .` | Add changes to the index ➕
+| `git commit -m "Commit Message"` | Commit changes with a message 📝
+| `git commit -am "Commit Message"` | Add and commit changes in one command 📦
+| `git push origin master` | Push commits to a remote repository 🚀
+| `git fetch` | Download objects and refs from a remote repository 📥
+| `git pull` | Fetch from and integrate with another repository or a local branch 🔄
+| `git branch` | List, create, or delete branches 🌿
+| `git checkout <branch>` | Switch branches or restore working tree files 🔄
+| `git merge <branch>` | Join two or more development histories together 🤝
+| `git log` | Show the commit logs 📜
+| `git diff` | Show changes between commits, commit and working tree, etc. ↔️
+| `git stash` | Stash changes in a dirty working directory away 📥
+| `git rm <file>` | Remove files from the working tree and from the index ❌
 
-To check your credentials just run these commands git reply's with your name.
 
-`git config user.name`
+ ## Uploading Files to GitHub with Branching" 🚀📂
 
-`git config user.email`
+ Here's the complete set of commands to upload files to GitHub using Git, including creating a new branch:
 
-Make sure you run all these commands in your working folder / project folder
+1. **Initialize a Git Repository:**
+   ```bash
+   git init
+   ```
 
-### Making Repos
+2. **Add Files to the Staging Area:**
+   ```bash
+   git add .   # Add all files
+   ```
 
-`git init`
+   or
 
-You've just told your computer that you want git to watch the 'myProject' folder and keep track of any changes; basically making it so you can now run git commands inside of this folder.
+   ```bash
+   git add <file1> <file2>   # Add specific files
+   ```
 
-`git clone <url>`
+3. **Commit Changes:**
+   ```bash
+   git commit -m "Your commit message here"
+   ```
 
-The clone is on an equal with the original project, possessing its own copy of the original project’s history.It just downloads the source file.
+4. **Create a New Branch:**
+   ```bash
+   git branch <branch-name>
+   ```
 
-### Adding Remote
+   This command creates a new branch but doesn't switch to it.
 
-`git remote add origin https://github.com/user/repo.git`
+5. **Switch to the New Branch:**
+   ```bash
+   git checkout <branch-name>
+   ```
 
-This remote helps you to interact with the same repository over and over again. By defining remote repository shorthand, you can make it easier.
+   or, using the more recent `git switch` command:
 
-### Checking Added Remote
+   ```bash
+   git switch <branch-name>
+   ```
 
-`git remote -v`
+   Alternatively, you can combine branch creation and switching in one command:
+   ```bash
+   git checkout -b <branch-name>
+   ```
 
-### Making Changes
+6. **Make Changes, Add, and Commit in the New Branch:**
+   ```bash
+   git add .
+   git commit -m "Your commit message here"
+   ```
 
-`git status`
+7. **Add a Remote Repository (GitHub):**
+   ```bash
+   git remote add origin https://github.com/your-username/your-repository.git
+   ```
 
-Git briefs you about the current situation.  
+8. **Push the Changes to GitHub:**
+   ```bash
+   git push -u origin <branch-name>
+   ```
 
-`git add .`
+   The `-u` option sets the upstream branch for the new branch.
 
-Git to take a snapshot of the contents of all files under the current directory.
+Now, you've initialized a Git repository, added files, committed changes, created a new branch, made changes in the new branch, and pushed the changes to GitHub. Remember to replace `your-username`, `your-repository`, and `<branch-name>` with your actual GitHub username, repository name, and the desired branch name.
 
-`git commit -m "Commit Message"`
+Happy coding and branching! 🚀🌿
 
-If you need to make any further adjustments, do so now, and then add any newly modified content to the index. Finally, commit your changes with a commit message.
 
-`git commit -am "Commit Message"`
 
-This command makes you to run two commands, one adding all the files and commit changes.
+## 🎯 Why This Git Training?
 
-### Pushing Repo Code
+Whether you're a Git novice or eager to enhance your skills, this hands-on experience,  ensures effective learning.
 
-`git push origin master `
 
-This is used to push commits made on your local branch to a remote repository.
+## 📜 License
 
-### Fetching and Pull
+Open-source under the MIT License.
 
-`git fetch`
+MIT License
 
-`git pull `
+Copyright (c) 2020 CodeMacrocosm
+
+## 🌟 Star This Repository
+
+Show support if you find it helpful!
+
+## Conclusion
+
+Congratulations! You've completed this extended tutorial and have a solid foundation in using  Git for version control. Use the provided Git cheat sheet as a quick reference, and explore more about the power of pull requests in the [GitHub Flow Guide](https://guides.github.com/introduction/flow/). 🌟
+
+Happy coding! 🚀🎉✨👩‍💻🌟🏁
+
+
+## 🚀 Let's Get Started!
+
+Begin your Git journey today. Happy Learning! 🌟"
